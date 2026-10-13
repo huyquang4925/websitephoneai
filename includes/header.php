@@ -20,9 +20,12 @@ if (str_contains($currentPath, '/admin/')) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= e($pageTitle ?? 'MCHAphone Store') ?></title>
     <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/style.css?v=<?= file_exists(__DIR__ . '/../assets/css/style.css') ? filemtime(__DIR__ . '/../assets/css/style.css') : '1' ?>">
+    <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/chatbot.css?v=<?= file_exists(__DIR__ . '/../assets/css/chatbot.css') ? filemtime(__DIR__ . '/../assets/css/chatbot.css') : '1' ?>">
     <?php foreach (($pageCss ?? []) as $css): ?>
         <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/<?= e($css) ?>.css?v=<?= file_exists(__DIR__ . '/../assets/css/' . $css . '.css') ? filemtime(__DIR__ . '/../assets/css/' . $css . '.css') : '1' ?>">
     <?php endforeach; ?>
+    <script>window.CHATBOT_CONFIG = { baseUrl: '<?= BASE_URL ?>', isCustomer: <?= is_customer() ? 'true' : 'false' ?> };</script>
+    <script src="<?= BASE_URL ?>/assets/js/chatbot.js?v=<?= file_exists(__DIR__ . '/../assets/js/chatbot.js') ? filemtime(__DIR__ . '/../assets/js/chatbot.js') : '1' ?>" defer></script>
 </head>
 <body class="<?= e($bodyClass ?? '') ?>">
 <?php require __DIR__ . '/navbar.php'; ?>

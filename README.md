@@ -16,3 +16,5 @@ Kiểm tra và điều chỉnh thông tin kết nối DB (host, user, password, 
 Truy cập theo đường dẫn: http://localhost/websitephoneai/
 
 **Lưu ý nếu có code mới nên dùng lệnh git pull để kéo code về không bị xung đột với code cần sửa nhá**
+
+Các file .sh là test tùy chọn, không cần chạy để sử dụng website (folder test/).
